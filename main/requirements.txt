@@ -1,0 +1,5 @@
+fastapi==0.110.0
+uvicorn==0.28.0
+Django==5.0.3
+pytest==8.1.1
+pytest-django==4.8.0
