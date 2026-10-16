@@ -35,6 +35,12 @@ jobs:
       - name: ⚙️ Configurar Pages
         uses: actions/configure-pages@v5
 
+      - name: 🧩 Preparar páginas de suma y resta
+        run: |
+          mkdir -p main/public/suma main/public/resta
+          cp main/app_suma/templates/index.html main/public/suma/index.html
+          cp main/app_resta/templates/index.html main/public/resta/index.html
+
       - name: 📤 Cargar artefactos web
         uses: actions/upload-pages-artifact@v3
         with:
