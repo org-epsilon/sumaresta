@@ -38,7 +38,7 @@ jobs:
       - name: 📤 Cargar artefactos web
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'public'
+          path: './public'
 
       - name: 🚀 Desplegar en GitHub Pages
         id: deployment
