@@ -63,3 +63,10 @@ jobs:
       - name: 🚀 Desplegar en GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: 📄 Asegurar index.html
+        run: |
+          mkdir -p public
+          if [ ! -f public/index.html ]; then
+            echo "<h1>Bienvenido a Multi-App CI/CD</h1><p><a href='app_suma/'>App Suma</a> | <a href='app_resta/'>App Resta</a></p>" > public/index.html
+          fi
